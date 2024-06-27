@@ -1,6 +1,5 @@
-echo alias cdcd=\'cd /mnt/bigdata/00_students/kazuma_nis/\' >> ~/.bashrc
+echo "source $(realpath $(dirname $0))/functions.sh" >> ~/.bashrc
 
-echo alias ta=\'tmux attach-session \-t\' >> ~/.bashrc
-echo alias tk=\'tmux kill-session \-t\' >> ~/.bashrc
-echo alias tl=\'tmux list-session\' >> ~/.bashrc
-echo alias tn=\'tmux new-session \-t\' >> ~/.bashrc
+echo "while read l; do
+    alias \"\$l\"
+done < $(realpath $(dirname $0))/macros.txt" >> ~/.bashrc

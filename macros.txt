@@ -1,0 +1,5 @@
+cdcd=cd /mnt/bigdata/00_students/kazuma_nis/
+ta=tmux attach-session -t
+tk=tmux kill-session -t
+tl=tmux list-session
+tn=tmux new-session -t
